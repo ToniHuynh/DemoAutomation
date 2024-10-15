@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import LoginHelper from '../helpers/loginHelper'
+import LoginHelper from '../helpers/LoginHelper'
 import HomePage from '../POM/homePage' 
 
 test.describe('Place Order', () => {

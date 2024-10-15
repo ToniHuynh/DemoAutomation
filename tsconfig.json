@@ -2,10 +2,10 @@
     "compilerOptions": {
       "baseUrl": "./",
       "paths": {
-        "@helpers/*": ["src/helpers/*"],
-        "@POM/*": ["src/POM/*"],
-        "@auth/*": ["src/auth/*"],
-        "@data/*": ["src/data/*"],
+        "@helpers/*": ["helpers/*"],
+        "@POM/*": ["POM/*"],
+        "@auth/*": ["auth/*"],
+        "@data": ["data"],
       }
     }
   }
