@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test'
 import LoginHelper from '../helpers/LoginHelper'
-import HomePage from '../POM/homePage' 
+import DataReader from '../helpers/jsonhelper'
+import HomePage from '../POM/homePage'
+ 
 
 test.describe('Place Order', () => {
     test.use({ storageState: './auth/user.json' })
@@ -15,8 +17,16 @@ test.describe('Place Order', () => {
             await loginHelper.login()
         }else console.log("User is already logged in")
     
+        const productData = DataReader.readJSON('../data/productdata.json');
+        let itemList: Array<string> = []
+
         //proceed with order
-        await homePage.orderProducts(['Casual Golf Belt', 'Blue Jeans'])
+        for(const product of productData.products){
+            itemList.push(`${product.category}:${product.name}`)
+        }
+        
+        await homePage.orderProducts(itemList)
+        //await homePage.orderProducts(['Apparel-Shoes:Casual Golf Belt', 'Books:Computing and Internet'])
 
     })
 })

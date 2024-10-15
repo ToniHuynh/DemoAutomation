@@ -20,18 +20,23 @@ export default class HomePage {
             const beforeQuantity = await this.getCartQuantity(cartQtyLocator) // get the number of items in the cart
             console.log('beforeQuantity: ', beforeQuantity)
 
-            // Navigate to the Apparel & Shoes category
-            await this.page.click(".top-menu [href='/apparel-shoes']"); 
-
-            for (const selectedItem of selectedItems) {
-                // locate the Add to Cart button for the selected item
-                const addToCartButton = this.page.locator(`//a[.='${selectedItem}']/../..//input`)
+            for (const product of selectedItems) {
+                const [category, productName] = product.split(':')
+                console.log('category: ', category)
+                console.log('productName: ', productName)
+                // Navigate to the category page
+                await this.page.click(`.top-menu [href='/${category.toLowerCase()}']`)
+                
+                // Add the product to the cart
+                const addToCartButton = this.page.locator(`//a[.='${productName}']/../..//input`)
                
                 // Wait for the Ajax response to the request to add the item to the cart
                 const [response] = await Promise.all([
                     this.page.waitForResponse(response => response.url().includes('/addproducttocart') && response.status() === 200),
                     await addToCartButton.click() // Click the order button
                 ])
+                console.log('Added item to cart')
+
             }
 
             // Check if the number of items in the cart has increased by the number of selected items

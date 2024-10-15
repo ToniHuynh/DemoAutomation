@@ -1,12 +1,12 @@
 {
     "products": [
         {
-            "category": "Apparel & Shoes",
+            "category": "apparel-shoes",
             "name": "Blue Jeans",
             "price": 100
         },
         {
-            "category": "Apparel & Shoes",
+            "category": "apparel-shoes",
             "name": "Casual Golf Belt",
             "price": 200
         },
@@ -17,18 +17,8 @@
         },
         {
             "category": "Books",
-            "name": "Copy of Computing and Internet EX",
-            "price": 300
-        },
-        {
-            "category": "Books",
             "name": "Fiction",
             "price": 300
-        },
-        {
-            "category": "Books",
-            "name": "Fiction EX",
-            "price": 300
-        }     
+        }
     ]
 }
