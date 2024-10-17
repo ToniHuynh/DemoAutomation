@@ -24,10 +24,7 @@ test.describe('Place Order', () => {
         for(const product of productData.products){
             itemList.push(`${product.category}:${product.name}`)
         }
-        
         await homePage.orderProducts(itemList)
-        //await homePage.orderProducts(['Apparel-Shoes:Casual Golf Belt', 'Books:Computing and Internet'])
-
     })
 })
 
