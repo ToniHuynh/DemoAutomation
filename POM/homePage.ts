@@ -2,9 +2,11 @@ import { expect, Locator, Page } from '@playwright/test'
 
 export default class HomePage {
         private loginButton: Locator
+        private cartIcon: Locator
             
         constructor(public page: Page) {
-            this.loginButton = this.page.locator('a:has-text("Log in")');  
+            this.loginButton = this.page.locator('a:has-text("Log in")');
+            this.cartIcon = this.page.locator("//span[.='Shopping cart']")  
         }
     
         async isUserNOTLoggedIn(): Promise<boolean> {
@@ -51,4 +53,7 @@ export default class HomePage {
             return cartItems ? parseInt(cartItems.match(/\d+/)?.[0] || '0', 10) : 0
         }
 
+        async clickCartIcon() {
+            await this.cartIcon.click()
+        }
 }

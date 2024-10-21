@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import RegisterPage from '../POM/registerPage'
-import DataReader from '../helpers/JSONHelper'
+import DataReader from '../helpers/jsonhelper'
 
 test('Register', async ({ page }) => {
   // Read user data from JSON file
