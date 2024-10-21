@@ -3,7 +3,7 @@ import LoginHelper from '../helpers/LoginHelper'
 import DataReader from '../helpers/jsonhelper'
 import HomePage from '../POM/homePage'
 import CartPage from '../POM/cartPage'
- 
+import CheckOutPage from '../POM/checkOutPage'
 
 test.describe('Place Order', () => {
     test.use({ storageState: './auth/user.json' })
@@ -42,7 +42,13 @@ test.describe('Place Order', () => {
 
         //checkout the order
         await cartPage.checkoutOrder()
+
+        //Continue the checkout process
+        const checkOutPage = new CheckOutPage(page)
+        await checkOutPage.checkOutProgress()
+
         await page.waitForTimeout(3000)
+
         
     })
 })
