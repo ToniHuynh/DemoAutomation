@@ -33,4 +33,10 @@ export default class CartPage {
         }    
         else console.log("cannot detect the country selection")
     }   
+
+    async checkoutOrder() {
+        await this.page.click("#termsofservice")
+        await this.page.click(".checkout-button")
+        await expect(this.page).toHaveURL('/onepagecheckout')
+    }
 }

@@ -40,6 +40,8 @@ test.describe('Place Order', () => {
         //estimate the shipping cost
         await cartPage.estimateShipping()
 
+        //checkout the order
+        await cartPage.checkoutOrder()
         await page.waitForTimeout(3000)
         
     })
