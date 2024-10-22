@@ -5,8 +5,7 @@ export default class CartPage {
     private selectCountry: Locator
 
     constructor(public page: Page) {
-        //this.qtyItem = this.page.locator("//a[contains(text(), 'Computing and Internet')]/../..//input[@class='qty-input']")
-
+       
     }
 
     async editCart(productName: string, qty: string) {
@@ -27,7 +26,7 @@ export default class CartPage {
             await this.selectCountry.selectOption({label: 'Australia'})
             await this.page.fill("#ZipPostalCode", "3750")
             await this.page.click(".estimate-shipping-button")
-            const shippingText = await (await this.page.locator(".shipping-results > .shipping-option-item > " +
+            const shippingText = (await this.page.locator(".shipping-results > .shipping-option-item > " +
                 ".option-description").nth(0).textContent()).trim()
             expect(shippingText).toMatch(/^Compared to other shipping methods/)
         }    

@@ -1,10 +1,12 @@
 import { expect, Locator, Page } from '@playwright/test'
+import JSONWriter from '@helpers/jsonWriter'
 
 export default class HomePage {
         private loginButton: Locator
         private cartIcon: Locator
             
         constructor(public page: Page) {
+            //const fs = require('fs')
             this.loginButton = this.page.locator('a:has-text("Log in")');
             this.cartIcon = this.page.locator("//span[.='Shopping cart']")  
         }
@@ -19,13 +21,14 @@ export default class HomePage {
 
         async orderProducts(selectedItems: string[]) {
             const cartQtyLocator = this.page.locator("span.cart-qty") // the number of items in the cart
-            const beforeQuantity = await this.getCartQuantity(cartQtyLocator) // get the number of items in the cart
+            let beforeQuantity = await this.getCartQuantity(cartQtyLocator) // get the number of items in the cart
             console.log('beforeQuantity: ', beforeQuantity)
 
             for (const product of selectedItems) {
                 const [category, productName] = product.split(':')
                 console.log('category: ', category)
                 console.log('productName: ', productName)
+
                 // Navigate to the category page
                 await this.page.click(`.top-menu [href='/${category.toLowerCase()}']`)
                 
@@ -34,11 +37,20 @@ export default class HomePage {
                
                 // Wait for the Ajax response to the request to add the item to the cart
                 const [response] = await Promise.all([
-                    this.page.waitForResponse(response => response.url().includes('/addproducttocart') && response.status() === 200),
+                    this.page.waitForResponse(response => response.url().includes('/addproducttocart') 
+                                                            && response.status() === 200),
                     await addToCartButton.click() // Click the order button
                 ])
-                console.log('Added item to cart')
-
+       
+                const message = await this.page.locator(".content").textContent()
+                if (message === 'Out of stock') {
+                    JSONWriter.writeJSON(category, productName, "Cannot add item. Out of stock")
+                    console.log('Cannot add item. Out of stock')
+                    beforeQuantity -= 1
+                }else{
+                    JSONWriter.writeJSON(category, productName, "Added item to cart")
+                    console.log('Added item to cart')
+                } 
             }
 
             // Check if the number of items in the cart has increased by the number of selected items

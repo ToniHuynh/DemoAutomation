@@ -1,7 +1,7 @@
 import { Page, expect } from '@playwright/test'
 import HomePage from '../POM/homePage'
 import LoginPage from '../POM/loginPage'
-import DataReader from '../helpers/jsonhelper'
+import DataReader from './jsonReader'
 
 class LoginHelper {
     private page: Page;

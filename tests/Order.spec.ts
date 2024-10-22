@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import LoginHelper from '../helpers/LoginHelper'
-import DataReader from '../helpers/jsonhelper'
+import DataReader from '../helpers/jsonReader'
 import HomePage from '../POM/homePage'
 import CartPage from '../POM/cartPage'
 import CheckOutPage from '../POM/checkOutPage'
@@ -19,7 +19,7 @@ test.describe('Place Order', () => {
             await loginHelper.login()
         }else console.log("User is already logged in")
     
-        const productData = DataReader.readJSON('../data/productdata.json');
+        const productData = DataReader.readJSON('productdata.json');
         let itemList: Array<string> = []
 
         //extract the products and its category then put into the array

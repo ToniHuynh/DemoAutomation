@@ -11,9 +11,19 @@
             "price": 200
         },
         {
+            "category": "apparel-shoes",
+            "name": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
+            "price": 200
+        },
+        {
             "category": "Books",
             "name": "Computing and Internet",
             "price": 300
+        },
+        {
+            "category": "apparel-shoes",
+            "name": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
+            "price": 200
         },
         {
             "category": "Books",
