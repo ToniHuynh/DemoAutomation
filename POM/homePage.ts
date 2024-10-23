@@ -30,8 +30,15 @@ export default class HomePage {
                 console.log('productName: ', productName)
 
                 // Navigate to the category page
-                await this.page.click(`.top-menu [href='/${category.toLowerCase()}']`)
-                
+                const categoryLink = this.page.locator(`.top-menu [href='/${category.toLowerCase()}']`)
+                if (!await categoryLink.isVisible()) { // Check if the category exists
+                    console.log(`Category '${category}' not found`) 
+                    JSONWriter.writeJSON(category, productName, "Cannot add item. Category not found")
+                    beforeQuantity -= 1
+                    continue // Skip the current product and move to the next one
+                }else 
+                    await this.page.click(`.top-menu [href='/${category.toLowerCase()}']`) // Click the category link
+    
                 // Add the product to the cart
                 const addToCartButton = this.page.locator(`//a[.='${productName}']/../..//input`)
                
@@ -61,7 +68,7 @@ export default class HomePage {
         }
 
         private async getCartQuantity(cartQtyLocator: Locator): Promise<number> {
-            const cartItems = await cartQtyLocator.textContent()
+            const cartItems = (await cartQtyLocator.textContent()) || ''
             return cartItems ? parseInt(cartItems.match(/\d+/)?.[0] || '0', 10) : 0
         }
 

@@ -6,6 +6,11 @@
             "price": 100
         },
         {
+            "category": "notebooks",
+            "name": "14.1 inch Laptop",
+            "price": 200
+        },
+        {
             "category": "apparel-shoes",
             "name": "Casual Golf Belt",
             "price": 200
@@ -21,14 +26,9 @@
             "price": 300
         },
         {
-            "category": "apparel-shoes",
-            "name": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-            "price": 200
-        },
-        {
             "category": "Books",
             "name": "Fiction",
-            "price": 300
+            "price": 500
         }
     ]
 }
