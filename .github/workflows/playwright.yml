@@ -23,4 +23,4 @@ jobs:
             ls -la
             ls -la helpers
     - name: Run Playwright tests
-      run: npx playwright test
+      run: SECRET_KEY='mySecretKey12345' npx playwright test

@@ -5,10 +5,10 @@ export default class LoginPage{
     constructor (public page: Page) {
     }
 
-    async enterCredential (email: string, 
-                         password: string){
-        await this.page.locator('#Email').fill(email)
-        await this.page.locator("#Password").fill(password)
+    async enterCredential (encryptedEmail: string, 
+                         encryptedPassword: string){
+        await this.page.locator('#Email').fill(encryptedEmail)
+        await this.page.locator("#Password").fill(encryptedPassword)
 
     }
 

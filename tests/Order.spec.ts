@@ -4,9 +4,10 @@ import DataReader from '../helpers/jsonReader'
 import HomePage from '../POM/homePage'
 import CartPage from '../POM/cartPage'
 import CheckOutPage from '../POM/checkOutPage'
+import { encryptData, decryptData } from '@helpers/crypto-utils'
 
 test.describe('Place Order', () => {
-    test.use({ storageState: './auth/user.json' })
+    //test.use({ storageState: './auth/user.json' })
     test('Order', async ({ page }) => {
     
         await page.goto('/')
@@ -47,9 +48,34 @@ test.describe('Place Order', () => {
         const checkOutPage = new CheckOutPage(page)
         await checkOutPage.checkOutProgress()
 
-        await page.waitForTimeout(3000)
+        //await page.waitForTimeout(3000)
 
         
     })
 })
 
+// test.describe('Encrypt credential', () => {
+//     test('Encrypt credentials', async ({ page }) => {
+//         // Example credentials to be encrypted
+//     const userCredentials = {
+//         username: 'testerdemo1000@gmail.com',
+//         password: 'Test123!'
+//     };
+  
+//     // Encrypt the credentials before storing or sending them
+//     // const encryptedUsername = encryptData(userCredentials.username);
+//     // const encryptedPassword = encryptData(userCredentials.password);
+    
+//     // // Display the encrypted values (for demonstration purposes)
+//     // console.log('Encrypted Username:', encryptedUsername);
+//     // console.log('Encrypted Password:', encryptedPassword);
+    
+//     // Decrypt the credentials before using them in your tests
+//     const decryptedUsername = decryptData("U2FsdGVkX1858Bo2VbSwCsPkgm7JMlb7177VoLiO2KeFKsOOxZ3srRMmE8pSq69T")
+//     const decryptedPassword = decryptData("U2FsdGVkX19yJMInJNplTIMczF1tpXsd8rOsoalD3FY=")
+//     console.log('Decrypted Username:', decryptedUsername)
+//     console.log('Decrypted Password:', decryptedPassword)
+    
+//     })
+    
+// })

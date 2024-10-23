@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as dotenv from 'dotenv';
 
 /**
  * Read environment variables from file.
@@ -7,6 +8,13 @@ import { defineConfig, devices } from '@playwright/test';
 // import dotenv from 'dotenv';
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+switch(process.env.NODE_ENV){
+  case 'local': dotenv.config({path: './environments/local.env'}); break;
+  case 'dev': dotenv.config({path: './environments/dev.env'}); break;
+  case 'qa': dotenv.config({path: './environments/qa.env'}); break;
+  default: dotenv.config({path: './environments/qa.env'});
+}
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -32,7 +40,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: true,
+    headless: false,
     launchOptions: {
       args: ['--start-maximized']
     },

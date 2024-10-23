@@ -2,12 +2,15 @@ import { Page, expect } from '@playwright/test'
 import HomePage from '../POM/homePage'
 import LoginPage from '../POM/loginPage'
 import DataReader from './jsonReader'
+import { decryptData } from './crypto-utils'
 
 class LoginHelper {
     private page: Page;
     private homePage: HomePage;
     private loginPage: LoginPage;
     private userData: any;
+    private username: string;
+    private password: string;
 
     constructor(page: Page) {
         this.page = page;
@@ -24,14 +27,20 @@ class LoginHelper {
             await this.homePage.clickLoginLink()
             await expect(this.page.locator('h1:has-text("Welcome, Please Sign In!")')).toBeVisible()
 
-            await this.loginPage.enterCredential(this.userData.email, this.userData.password)
+            await this.decryptCredentials(this.userData.email, this.userData.password)
+            await this.loginPage.enterCredential(this.username, this.password)
             await this.loginPage.clickLoginButton()
 
-            await expect(this.page.locator(`text=${this.userData.email}`)).toBeVisible()
+            await expect(this.page.locator(`text=${this.username}`)).toBeVisible()
             await this.page.context().storageState({ path: "./auth/user.json" })
         } else {
             console.log("User is already logged in")
         }
+    }
+
+    async decryptCredentials(encodedEmail: string, encodedPassword: string) {
+        this.username = decryptData(this.userData.email)
+        this.password =  decryptData(this.userData.password)
     }
 }
 
