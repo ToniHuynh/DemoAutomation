@@ -94,5 +94,53 @@
     "category": "Books",
     "product": "Science",
     "message": "Cannot add item. Product is not available"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:36.160Z",
+    "category": "apparel-shoes",
+    "product": "Blue Jeans",
+    "message": "Added item to cart"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:36.864Z",
+    "category": "apparel-shoes",
+    "product": "custom t-shirt",
+    "message": "Cannot add item. Product is not available"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:38.426Z",
+    "category": "computers",
+    "product": "14.1-inch Laptop",
+    "message": "Added item to cart"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:39.639Z",
+    "category": "apparel-shoes",
+    "product": "Casual Golf Belt",
+    "message": "Added item to cart"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:40.890Z",
+    "category": "apparel-shoes",
+    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
+    "message": "Cannot add item. Out of stock"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:42.251Z",
+    "category": "Books",
+    "product": "Computing and Internet",
+    "message": "Added item to cart"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:43.427Z",
+    "category": "Books",
+    "product": "Fiction",
+    "message": "Added item to cart"
+  },
+  {
+    "timestamp": "2024-10-24T06:43:44.148Z",
+    "category": "Books",
+    "product": "Science",
+    "message": "Cannot add item. Product is not available"
   }
 ]
