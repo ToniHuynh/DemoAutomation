@@ -6,8 +6,9 @@
             "price": 100
         },
         {
-            "category": "notebooks",
-            "name": "14.1 inch Laptop",
+            "category": "computers",
+            "subcategory": "notebooks",
+            "name": "14.1-inch Laptop",
             "price": 200
         },
         {

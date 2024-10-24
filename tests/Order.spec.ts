@@ -4,7 +4,7 @@ import DataReader from '../helpers/jsonReader'
 import HomePage from '../POM/homePage'
 import CartPage from '../POM/cartPage'
 import CheckOutPage from '../POM/checkOutPage'
-import { encryptData, decryptData } from '@helpers/crypto-utils'
+
 
 test.describe('Place Order', () => {
     test.use({ storageState: './auth/user.json' })
@@ -25,7 +25,9 @@ test.describe('Place Order', () => {
 
         //extract the products and its category then put into the array
         for(const product of productData.products){
-            itemList.push(`${product.category}:${product.name}`) 
+            if (product.subcategory === undefined) product.subcategory = "none"
+
+            itemList.push(`${product.category}:${product.subcategory}:${product.name}`)
         }
         //start adding item from the list of products to the cart
         await homePage.orderProducts(itemList)

@@ -6,7 +6,6 @@ export default class HomePage {
         private cartIcon: Locator
             
         constructor(public page: Page) {
-            //const fs = require('fs')
             this.loginButton = this.page.locator('a:has-text("Log in")');
             this.cartIcon = this.page.locator("//span[.='Shopping cart']")  
         }
@@ -25,23 +24,42 @@ export default class HomePage {
             console.log('beforeQuantity: ', beforeQuantity)
 
             for (const product of selectedItems) {
-                const [category, productName] = product.split(':')
+                const [category, subcategory, productName] = product.split(':')
                 console.log('category: ', category)
+                console.log('subcategory: ', subcategory)
                 console.log('productName: ', productName)
 
-                // Navigate to the category page
+               // Navigate to the category page
                 const categoryLink = this.page.locator(`.top-menu [href='/${category.toLowerCase()}']`)
-                if (!await categoryLink.isVisible()) { // Check if the category exists
+                if (!await categoryLink.isVisible()) { 
+                    // Check if the category exists
                     console.log(`Category '${category}' not found`) 
                     JSONWriter.writeJSON(category, productName, "Cannot add item. Category not found")
-                    beforeQuantity -= 1
                     continue // Skip the current product and move to the next one
-                }else 
-                    await this.page.click(`.top-menu [href='/${category.toLowerCase()}']`) // Click the category link
-    
+                }
+
+                // Check if a subcategory is provided and visible
+                if (subcategory!=="none") {
+                    await this.page.hover(`.top-menu [href='/${category.toLowerCase()}']`) // Hover over the category link
+                    const subcategoryLink = this.page.locator(`.top-menu [href='/${subcategory.toLowerCase()}']`)
+                    
+                    if (!await subcategoryLink.isVisible()) { 
+                        // Check if the subcategory exists
+                        console.log(`Subcategory '${subcategory}' not found`) 
+                        JSONWriter.writeJSON(`${category} -> ${subcategory}`, productName, "Cannot add item. Subcategory not found")
+                        continue // Skip the current product and move to the next one
+                    } 
+                    
+                    // Click the subcategory link if it exists
+                    await subcategoryLink.click()
+                } else {
+                    // Click the category link if no subcategory is provided
+                    await categoryLink.click()
+                }
+
                 // Add the product to the cart
-                const addToCartButton = this.page.locator(`//a[.='${productName}']/../..//input`)
-               
+                const addToCartButton = this.page.locator(`a`, { hasText: productName }).locator('..').locator('..').locator('input')
+
                 // Wait for the Ajax response to the request to add the item to the cart
                 const [response] = await Promise.all([
                     this.page.waitForResponse(response => response.url().includes('/addproducttocart') 
