@@ -7,7 +7,7 @@ export default class HomePage {
             
         constructor(public page: Page) {
             this.loginButton = this.page.locator('a:has-text("Log in")');
-            this.cartIcon = this.page.locator("//span[.='Shopping cart']")  
+            this.cartIcon = this.page.locator('span').getByText('Shopping cart', { exact: true })  
         }
     
         async isUserNOTLoggedIn(): Promise<boolean> {
@@ -31,6 +31,7 @@ export default class HomePage {
 
                // Navigate to the category page
                 const categoryLink = this.page.locator(`.top-menu [href='/${category.toLowerCase()}']`)
+
                 if (!await categoryLink.isVisible()) { 
                     // Check if the category exists
                     console.log(`Category '${category}' not found`) 
@@ -58,7 +59,8 @@ export default class HomePage {
                 }
 
                 // Add the product to the cart
-                const addToCartButton = this.page.locator(`a`, { hasText: productName }).locator('..').locator('..').locator('input')
+                //const addToCartButton = this.page.locator(`a`, { hasText: productName }).locator('..').locator('..').locator('input')
+                const addToCartButton = this.page.getByText(productName).locator('..').locator('..').getByRole('button')
 
                 // Wait for the Ajax response to the request to add the item to the cart
                 const [response] = await Promise.all([
