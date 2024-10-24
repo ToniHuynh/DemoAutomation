@@ -1,518 +1,98 @@
 [
   {
-    "timestamp": "2024-10-24T01:26:41.820Z",
-    "category": "apparel-shoes -> \"\"",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:26:41.970Z",
-    "category": "computers -> \"\"",
-    "product": "14.1 inch Laptop",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:26:42.069Z",
-    "category": "apparel-shoes -> \"\"",
-    "product": "Casual Golf Belt",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:26:42.185Z",
-    "category": "apparel-shoes -> \"\"",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:26:42.277Z",
-    "category": "Books -> \"\"",
-    "product": "Computing and Internet",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:26:42.349Z",
-    "category": "Books -> \"\"",
-    "product": "Fiction",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:28:23.407Z",
-    "category": "apparel-shoes -> \"\"",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:32:01.264Z",
-    "category": "apparel-shoes -> null",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:35:18.030Z",
-    "category": "apparel-shoes -> null",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:42:50.423Z",
-    "category": "apparel-shoes -> null",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:43:52.687Z",
+    "timestamp": "2024-10-24T06:18:38.054Z",
     "category": "apparel-shoes",
     "product": "Blue Jeans",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:44:30.197Z",
+    "timestamp": "2024-10-24T06:18:38.773Z",
     "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
+    "product": "custom t-shirt",
+    "message": "Cannot add item. Product is not available"
   },
   {
-    "timestamp": "2024-10-24T01:45:11.156Z",
-    "category": "apparel-shoes -> null",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Subcategory not found"
-  },
-  {
-    "timestamp": "2024-10-24T01:47:11.303Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T01:50:06.835Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T01:50:49.161Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T01:54:52.111Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T01:54:53.475Z",
+    "timestamp": "2024-10-24T06:18:40.034Z",
     "category": "computers",
     "product": "14.1-inch Laptop",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:54:54.820Z",
+    "timestamp": "2024-10-24T06:18:41.363Z",
     "category": "apparel-shoes",
     "product": "Casual Golf Belt",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:54:55.997Z",
+    "timestamp": "2024-10-24T06:18:42.439Z",
     "category": "apparel-shoes",
     "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
     "message": "Cannot add item. Out of stock"
   },
   {
-    "timestamp": "2024-10-24T01:54:57.777Z",
+    "timestamp": "2024-10-24T06:18:43.836Z",
     "category": "Books",
     "product": "Computing and Internet",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:54:59.051Z",
+    "timestamp": "2024-10-24T06:18:45.038Z",
     "category": "Books",
     "product": "Fiction",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:58:01.185Z",
+    "timestamp": "2024-10-24T06:18:45.898Z",
+    "category": "Books",
+    "product": "Science",
+    "message": "Cannot add item. Product is not available"
+  },
+  {
+    "timestamp": "2024-10-24T06:31:19.794Z",
     "category": "apparel-shoes",
     "product": "Blue Jeans",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:58:02.769Z",
+    "timestamp": "2024-10-24T06:31:20.534Z",
+    "category": "apparel-shoes",
+    "product": "custom t-shirt",
+    "message": "Cannot add item. Product is not available"
+  },
+  {
+    "timestamp": "2024-10-24T06:31:21.714Z",
     "category": "computers",
     "product": "14.1-inch Laptop",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:58:04.092Z",
+    "timestamp": "2024-10-24T06:31:22.901Z",
     "category": "apparel-shoes",
     "product": "Casual Golf Belt",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:58:05.306Z",
+    "timestamp": "2024-10-24T06:31:24.007Z",
     "category": "apparel-shoes",
     "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
     "message": "Cannot add item. Out of stock"
   },
   {
-    "timestamp": "2024-10-24T01:58:06.658Z",
+    "timestamp": "2024-10-24T06:31:25.352Z",
     "category": "Books",
     "product": "Computing and Internet",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T01:58:07.920Z",
+    "timestamp": "2024-10-24T06:31:26.521Z",
     "category": "Books",
     "product": "Fiction",
     "message": "Added item to cart"
   },
   {
-    "timestamp": "2024-10-24T02:00:23.076Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:00:24.395Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:00:25.637Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:00:26.847Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:00:28.293Z",
+    "timestamp": "2024-10-24T06:31:27.206Z",
     "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:00:29.575Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:10:32.300Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:10:33.647Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:10:34.922Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:10:36.160Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:10:37.558Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:10:38.853Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:12:54.036Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:12:55.447Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:12:56.703Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:12:57.958Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:12:59.436Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:13:00.732Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:42:31.873Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:42:33.300Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:42:34.669Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:42:35.907Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:42:37.362Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:42:38.596Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:44:17.581Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:44:19.130Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:44:20.513Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:44:21.794Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:44:23.359Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:44:24.601Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:47:01.677Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:47:03.091Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:47:04.391Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:47:05.625Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:47:07.050Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:47:08.286Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:49:04.551Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:49:06.016Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:49:07.401Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:49:08.650Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:49:10.130Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:49:11.416Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:08.918Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:08.930Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:08.947Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:08.959Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:29.134Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:29.143Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:29.152Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:29.159Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:55:50.825Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Category not found"
-  },
-  {
-    "timestamp": "2024-10-24T02:56:26.185Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:56:27.491Z",
-    "category": "computers",
-    "product": "14.1-inch Laptop",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:56:28.772Z",
-    "category": "apparel-shoes",
-    "product": "Casual Golf Belt",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:56:29.973Z",
-    "category": "apparel-shoes",
-    "product": "Genuine Leather Handbag with Cell Phone Holder & Many Pockets",
-    "message": "Cannot add item. Out of stock"
-  },
-  {
-    "timestamp": "2024-10-24T02:56:31.756Z",
-    "category": "Books",
-    "product": "Computing and Internet",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:56:33.018Z",
-    "category": "Books",
-    "product": "Fiction",
-    "message": "Added item to cart"
-  },
-  {
-    "timestamp": "2024-10-24T02:57:18.439Z",
-    "category": "apparel-shoes",
-    "product": "Blue Jeans",
-    "message": "Cannot add item. Category not found"
+    "product": "Science",
+    "message": "Cannot add item. Product is not available"
   }
 ]

@@ -59,9 +59,15 @@ export default class HomePage {
                 }
 
                 // Add the product to the cart
-                //const addToCartButton = this.page.locator(`a`, { hasText: productName }).locator('..').locator('..').locator('input')
                 const addToCartButton = this.page.getByText(productName).locator('..').locator('..').getByRole('button')
 
+                // Check if the "Add to cart" button is visible, If not, the product is not available
+                if (!await addToCartButton.isVisible()) { 
+                    console.log(`Product '${productName}' is not available`) 
+                    JSONWriter.writeJSON(category, productName, "Cannot add item. Product is not available")
+                    beforeQuantity -= 1
+                    continue // Skip the current product and move to the next one
+                }
                 // Wait for the Ajax response to the request to add the item to the cart
                 const [response] = await Promise.all([
                     this.page.waitForResponse(response => response.url().includes('/addproducttocart') 

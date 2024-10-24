@@ -6,6 +6,11 @@
             "price": 100
         },
         {
+            "category": "apparel-shoes",
+            "name": "custom t-shirt",
+            "price": 200
+        },
+        {
             "category": "computers",
             "subcategory": "notebooks",
             "name": "14.1-inch Laptop",
@@ -29,6 +34,11 @@
         {
             "category": "Books",
             "name": "Fiction",
+            "price": 500
+        },
+        {
+            "category": "Books",
+            "name": "Science",
             "price": 500
         }
     ]

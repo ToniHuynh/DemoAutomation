@@ -22,6 +22,7 @@ export default class CartPage {
 
     async estimateShipping() {
         this.selectCountry = this.page.locator("#CountryId")
+        console.log("Estimating the shipping cost")
         if (await this.selectCountry.isVisible()){
             await this.selectCountry.selectOption({label: 'Australia'})
             await this.page.fill("#ZipPostalCode", "3750")
