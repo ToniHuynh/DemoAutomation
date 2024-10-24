@@ -9,4 +9,4 @@ The products to be ordered can be modified in the '../productdata.json' file.
 The testing pages and their components are in '../POM/ folder.
 The utility functions are stored in '../helpers/' folder.
 The test scripts are stored in '../tests/' folder with the default script being 'Order.spec.ts'.
-If you download the project, you can run it with the command: $env:SECRET_KEY="mysecretkey12345"; npx playwright test
+If you download the project, you can run the order test with this command: $env:SECRET_KEY="mysecretkey12345"; npx playwright test
