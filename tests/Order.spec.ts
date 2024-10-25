@@ -49,7 +49,5 @@ test.describe('Place Order', () => {
         //Continue the checkout process
         const checkOutPage = new CheckOutPage(page)
         await checkOutPage.checkOutProgress()
-
-        await page.close()
     })
 })
