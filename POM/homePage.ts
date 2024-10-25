@@ -4,6 +4,7 @@ import JSONWriter from '@helpers/jsonWriter'
 export default class HomePage {
         private loginButton: Locator
         private cartIcon: Locator
+        private currentCategory: string = ''
             
         constructor(public page: Page) {
             this.loginButton = this.page.locator('a:has-text("Log in")');
@@ -54,12 +55,17 @@ export default class HomePage {
                     // Click the subcategory link if it exists
                     await subcategoryLink.click()
                 } else {
-                    // Click the category link if no subcategory is provided
-                    await categoryLink.click()
+                    if(this.currentCategory !== category){
+                        // Click the category link if no subcategory is provided
+                        await categoryLink.click()
+                        this.currentCategory = category
+                    }
                 }
 
                 // Add the product to the cart
                 const addToCartButton = this.page.getByText(productName).locator('..').locator('..').getByRole('button')
+
+                await this.page.waitForLoadState('load')
 
                 // Check if the "Add to cart" button is visible, If not, the product is not available
                 if (!await addToCartButton.isVisible()) { 

@@ -50,8 +50,6 @@ test.describe('Place Order', () => {
         const checkOutPage = new CheckOutPage(page)
         await checkOutPage.checkOutProgress()
 
-        //await page.waitForTimeout(3000)
-
-        
+        await page.close()
     })
 })
